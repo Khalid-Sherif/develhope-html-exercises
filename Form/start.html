@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <!--<style>
+      label {
+        display: block;
+      }
+    </style> -->
+  </head>
+  <!-- Email
+      Password
+      Name and Lastname
+      Date of birth
+      Telephone number
+      A select for choosing plans: free plan, a group of 3 plans with increasing price, and a checkbox for a Pro Plan
+      Credit card number
+      CVC
+      Expiration date
+      Billing Address -->
+  <body>
+    <form>
+      <div>
+        <label for="email">Email:</label><br />
+        <input type="email" name="email" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="password">Password:</label><br />
+        <input type="password" name="password" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="name">Name:</label><br />
+        <input type="text" name="name" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="surname">Surname:</label><br />
+        <input type="text" name="surname" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="date_of_birth">Date of birth:</label><br />
+        <input type="date" name="date_of_birth" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="phone_number">Phone Number:</label><br />
+        <input
+          type="text"
+          name="phone_number"
+          placeholder="+90"
+          maxlength="3"
+        />
+        <input
+          type="text"
+          name="phone_number"
+          pattern="[0-9]+"
+          placeholder="555-666-8888"
+          maxlength="12"
+        />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="membership_type">Choose your Membership Type:</label><br />
+        <select name="membership_type">
+          <option value="free_plan">Free Plan 0$/Month</option>
+          <optgroup label="Premium Membership Plan">
+            <option>Premium Regular 25$/Month</option>
+            <option>Premium Plus 45$/Month</option>
+            <option>Premium Plus Deluxe 65$/Month</option>
+          </optgroup>
+          <input type="checkbox" name="pro_plus" value="Pro Plus Plan" />
+          <label for="pro_plus">Pro Plus Plan</label>
+        </select>
+      </div>
+
+      <br />
+
+      <div>
+        <label for="credit_card_number">Credit Card Number:</label>
+        <input
+          type="text"
+          placeholder="1234-5678-9012-3456"
+          pattern="[0-9]+"
+          maxlength="19"
+        />
+        <label for="exp_date">Credit Card Expiration Date:</label>
+        <input
+          type="text"
+          name="exp_date"
+          pattern="[0-9]+"
+          placeholder="Month"
+          maxlength="2"
+        />
+        <input
+          type="text"
+          name="exp_date"
+          pattern="[0-9]+"
+          placeholder="Year"
+          maxlength="4"
+        />
+        <input
+          type="text"
+          maxlength="3"
+          placeholder="CVC Number"
+          pattern="[0-9]+"
+        />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="billing_address">Billing Address</label><br />
+        <textarea
+          type="text"
+          name="billing_address"
+          placeholder="Country, City, Postal Code, Street Number..."
+        ></textarea>
+      </div>
+
+      <br />
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
